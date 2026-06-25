@@ -50,7 +50,7 @@ export function ScrollStory() {
   const op3 = useScene([0.20, 0.22], [0.28, 0.30]);
   const op4 = useScene([0.30, 0.32], [0.38, 0.40]);
   const op5 = useScene([0.60, 0.62], [0.70, 0.72]);
-  const op6 = useScene([0.70, 0.72], [0.70, 0.82]);
+  const op6 = useScene([0.70, 0.72], [0.72, 0.82]);
   const op7 = useScene([0.80, 0.82], [0.80, 0.92]);
   // (Scenes 6 & 7 added below if needed — same pattern)
 
@@ -77,7 +77,7 @@ export function ScrollStory() {
           {/* SCENE 1 — Center */}
           <motion.div
             style={{ opacity: op1 }}
-            className="absolute inset-0 flex items-center justify-center text-center"
+            className="absolute px-10 inset-0 flex items-center justify-center text-center"
           >
             <h1 className="text-white text-5xl font-medium">
               There is an <span className='text-purple-500 font-playfair'>organ</span> that <br /> predicts<span className='text-purple-500 font-playfair'> everything.</span>
@@ -97,21 +97,21 @@ export function ScrollStory() {
           {/* SCENE 3 — Right */}
           <motion.div
             style={{ opacity: op3 }}
-            className="absolute right-10 top-1/4 text-right"
+            className="absolute w-72 right-10 top-1/4 text-right"
           >
-            <h2 className="text-4xl w-80 font-playfair">When muscle deslines - everything follows.</h2>
+            <h2 className="text-4xl ">When <span className='text-purple-500 font-playfair'>muscle</span>  deslines - <span className='text-purple-500 font-playfair'>everything</span> follows.</h2>
 
           </motion.div>
 
           {/* SCENE 4 — Center */}
           <motion.div
             style={{ opacity: op4 }}
-            className="absolute left-10 w-100 top-1/3 -mt-40 text-left"
+            className="absolute left-10 w-72 top-1/3 -mt-44 text-left"
           >
 
-            <h2 className="text-5xl text-purple-500 font-playfair">Most chronic disease doesn't start in the organ that fails.</h2>
-            <p className="text-white "> It starts in the muscle that stopped protecting it.</p>
-            <p className="text-white"> Years earlier.</p>
+            <h2 className="text-4xl font-playfair">Most <span className='text-purple-500 font-playfair'>chronic disease </span> doesn't start in the  <span className='text-purple-500 font-playfair'>organ</span> that fails.</h2>
+            <p className="text-white pt-4"> It starts in the muscle that stopped protecting it.</p>
+            <p className="text-white uppercase text-xs opacity-80 pt-4"> Years earlier.</p>
           </motion.div>
 
           {/* SCENE 5 — Center Final */}
@@ -126,7 +126,7 @@ export function ScrollStory() {
 
           <motion.div
             style={{ opacity: op6 }}
-            className="absolute left-10 top-1/4 text-left"
+            className="absolute left-10 w-72 top-1/3 text-left"
           >
             <h2 className="text-6xl text-purple-500 font-playfair">Blood</h2>
 
@@ -136,10 +136,17 @@ export function ScrollStory() {
           {/* SCENE 3 — Right */}
           <motion.div
             style={{ opacity: op7 }}
-            className="absolute right-10 top-1/4 text-right"
+            className="absolute right-10 top-1/2 text-right"
           >
-            <h2 className="text-4xl w-80 font-playfair">When muscle deslines - everything follows.</h2>
-
+            <h2 className="text-4xl w-80 font-playfair">Your blood carries <span className='text-purple-500 font-playfair'>your true age. </span> </h2>
+            <p className="text-white pt-4" >Every second, it circulates signals:</p>
+            <div className="space-y-2 text-white">
+              <p>• The rate of breakdown</p>
+              <p>• The capacity to regenerate</p>
+              <p>• The metabolic efficiency</p>
+              <p>• The inflammatory burden</p>
+              <p>• The vascular integrity</p>
+            </div>
           </motion.div>
 
         </div>
