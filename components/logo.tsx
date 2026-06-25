@@ -1,25 +1,32 @@
-.logo {
-  display: block;
-}
+'use client';
 
-.shine {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.45) 50%,
-    transparent 100%
+import Image from 'next/image';
+import styles from './logo.module.css';
+
+export function LogoShine() {
+  return (
+    <div className="flex flex-col items-center gap-6">
+      {/* Bada logo */}
+      <div className="relative overflow-hidden">
+        <Image
+          src="/Predict-Logo.png"
+          alt="logo"
+          width={320}
+          height={160}
+          className={styles.logo}
+        />
+        <span className={styles.shine} />
+      </div>
+
+      {/* Coming Soon */}
+      <div className="flex flex-col items-center gap-2">
+        <p className={styles.comingSoon}>Coming Soon</p>
+        <div className={styles.dots}>
+          <span />
+          <span />
+          <span />
+        </div>
+      </div>
+    </div>
   );
-  animation: shine 3s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes shine {
-  0%   { left: -100%; }
-  40%  { left: 150%; }
-  100% { left: 150%; }
 }
